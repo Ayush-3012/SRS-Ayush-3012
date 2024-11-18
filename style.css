@@ -20,7 +20,7 @@ main {
   font-size: larger;
   padding: 1rem 2rem;
   display: flex;
-  border: 2px solid white;
+  margin: 10px 0;
   justify-content: space-evenly;
   gap: 20px;
 }
@@ -92,6 +92,12 @@ form button:hover {
   background-color: rgb(44, 53, 54);
   border-radius: 10px;
   flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 450px;
+  width: 100%;
 }
 
 table {
@@ -99,6 +105,8 @@ table {
   border-collapse: collapse;
   background-color: #ddd;
   color: yellow;
+  margin: 10px 0;
+  overflow-y: auto;
 }
 
 th,
@@ -111,6 +119,24 @@ td {
 
 th {
   background: rgb(85, 80, 80);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 234, 3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(155, 155, 16);
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(85, 80, 80);
+  border-radius: 5px;
 }
 
 td > button {
@@ -130,6 +156,17 @@ td > button:hover {
   transform: scaleX(1.075);
   transition-duration: 150ms;
 }
+
+footer {
+  background-color: rgb(64, 60, 60);
+  color: rgb(255, 239, 67);
+  text-align: center;
+  padding: 10px 0;
+  font-size: larger;
+  position: relative;
+  bottom: 0;
+}
+
 @media (max-width: 1250px) {
   main {
     flex-direction: column;
@@ -160,5 +197,26 @@ td > button:hover {
 @media (max-width: 550px) {
   #studentForm {
     max-width: 400px;
+  }
+  .formHeading {
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1rem;
+    margin: 0 0.4rem;
+  }
+  form input {
+    margin: 0 0.4rem;
+  }
+  form button {
+    margin: 0 0.4rem;
+  }
+  table {
+    font-size: 0.6rem;
+  }
+  td > button {
+    padding: 2px;
+    font-size: 0.6rem;
   }
 }

@@ -20,17 +20,17 @@
         <form id="studentForm">
           <div>
             <label for="studentName">Student Name:</label>
-            <input type="text" id="studentName" name="studentName" required />
+            <input type="text" id="studentName" name="studentName" />
           </div>
 
           <div>
             <label for="studentID">Student ID:</label>
-            <input type="number" id="studentID" name="studentID" required />
+            <input type="number" id="studentID" name="studentID" min="1" />
           </div>
 
           <div>
             <label for="emailID">Email ID:</label>
-            <input type="email" id="emailID" name="emailID" required />
+            <input type="email" id="emailID" name="emailID" />
           </div>
 
           <div>
@@ -40,7 +40,7 @@
               id="contactNo"
               name="contactNo"
               maxlength="10"
-              required
+              minlength="10"
             />
           </div>
 
@@ -64,6 +64,9 @@
         </table>
       </section>
     </main>
+    <footer>
+      <p>&copy; 2024 Student Registration System. All rights reserved.</p>
+    </footer>
 
     <script src="script.js" defer></script>
   </body>
