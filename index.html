@@ -7,6 +7,64 @@
     <title>SRS-Ayush-3012</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <header>
+      <h1>Student Registration System</h1>
+      <p>
+        Easily manage student records with options to add, edit, and delete
+        details.
+      </p>
+    </header>
+    <main>
+      <section class="formSection">
+        <h2 class="formHeading">Register a New Student</h2>
+        <form id="studentForm">
+          <div>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required />
+          </div>
+
+          <div>
+            <label for="studentID">Student ID:</label>
+            <input type="number" id="studentID" name="studentID" required />
+          </div>
+
+          <div>
+            <label for="emailID">Email ID:</label>
+            <input type="email" id="emailID" name="emailID" required />
+          </div>
+
+          <div>
+            <label for="contactNo">Contact No.:</label>
+            <input
+              type="number"
+              id="contactNo"
+              name="contactNo"
+              maxlength="10"
+              required
+            />
+          </div>
+
+          <button type="submit">Add Student</button>
+        </form>
+      </section>
+
+      <section class="tableSection">
+        <h2>Registered Students</h2>
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>Contact No.</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

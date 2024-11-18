@@ -1,0 +1,164 @@
+body {
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: rgb(64, 60, 60);
+  color: rgb(255, 239, 67);
+  text-align: center;
+  font-size: larger;
+  padding: 0.5rem 0;
+}
+
+main {
+  background-color: gray;
+  color: rgb(255, 234, 3);
+  text-align: center;
+  font-size: larger;
+  padding: 1rem 2rem;
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.formSection {
+  background-color: rgb(44, 53, 54);
+  border-radius: 10px;
+  flex: 1;
+}
+
+.formHeading {
+  font-family: serif;
+  color: rgb(255, 251, 0);
+  text-align: center;
+}
+
+#studentForm {
+  margin: 20px auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#studentForm > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+label {
+  font-weight: bold;
+  text-align: start;
+}
+
+form input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  background: rgb(85, 80, 80);
+  color: rgb(255, 234, 3);
+  font-family: serif;
+  outline: none;
+  border: none;
+}
+input:focus {
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+
+form button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-size: larger;
+  font-family: serif;
+  transition-duration: 150ms;
+  background-color: rgb(25, 21, 21);
+  color: yellow;
+  border: none;
+}
+form button:hover {
+  box-shadow: 1px 1px 10px rgb(255, 234, 3);
+  transition: ease-in-out;
+  transform: scaleX(1.075);
+  transition-duration: 150ms;
+}
+
+.tableSection {
+  background-color: rgb(44, 53, 54);
+  border-radius: 10px;
+  flex: 1;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  background-color: #ddd;
+  color: yellow;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: rgb(85, 80, 80);
+  text-align: center;
+}
+
+th {
+  background: rgb(85, 80, 80);
+}
+
+td > button {
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-family: serif;
+  transition-duration: 150ms;
+  background-color: rgb(25, 21, 21);
+  color: yellow;
+  border: none;
+}
+
+td > button:hover {
+  box-shadow: 1px 1px 10px rgb(255, 234, 3);
+  transition: ease-in-out;
+  transform: scaleX(1.075);
+  transition-duration: 150ms;
+}
+@media (max-width: 1250px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    font-size: small;
+  }
+  main {
+    gap: 10px;
+    padding: 0.5rem 0.25rem;
+  }
+  table {
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 6px;
+  }
+  td > button {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  #studentForm {
+    max-width: 400px;
+  }
+}
